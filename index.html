@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barkey</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <button id="popup-button" onclick="openUserPopup()"></button>
+    <div id="game-container">
+        <div class="card-slot"></div>
+        <div class="card-slot"></div>
+        <div class="card-slot"></div>
+        <div class="card-slot"></div>
+        <div class="card-slot"></div>
+        <div class="card-slot"></div>
+        <div class="card-slot"></div>
+        <div class="card-slot"></div>
+    </div>
+    <div id="popup-container" class="popup-container">
+        <div id="user-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-button" onclick="closeUserPopup()">&times;</span>
+                <h2>Thông tin người nghiện</h2>
+                <div class="user-info-container">
+                    <div class="user-avatar-container">
+                        <img src="src/img/download-removebg-preview.png" alt="User Avatar" class="user-avatar">
+                    </div>
+                    <div class="user-info">
+                        <p style="text-align: left;">Tên TK: emtrieunghien</p>
+                        <p style="text-align: left;">SĐT: 09xxx00xxx</p>
+                        <p style="text-align: left;">Số ngón: 10</p>
+                        <!-- Add more user information as needed -->
+                        <div class="user-buttons">
+                            <button class="report-ca" onclick="reportCA()">Báo CA</button>
+                            <button class="logout" onclick="logout()">Chuồn</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
