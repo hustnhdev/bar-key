@@ -1,4 +1,4 @@
-# 3 Card Game 
+# 3-Card Game 
 _Create by DNH_ <br/>
 ## <bold> _Long live Vietnam_ </bold>
 #
