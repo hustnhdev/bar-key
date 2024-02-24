@@ -1,0 +1,188 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: auto;
+    background-color:#04740d;
+}
+
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Increase the gap between card slots for better visibility */
+    justify-content: center;
+    width: 100%;
+    top: 30px;
+}
+
+.card-slot {
+    border: 5px solid #ffd800;
+    border-radius: 10px; /* Increase the border-radius for rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Increase font size for better visibility */
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .card-slot {
+        width: calc(20% - 20px); /* Four slots in one line with a gap of 20px */
+        height: 250px; /* Adjust height if needed */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-slot {
+        width: calc(50% - 10px); /* Four slots in one line with a gap of 20px */
+        height: 250px; /* Adjust height if needed */
+    }
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px; /* Set the maximum width for the large screen */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+    border-radius: 10px;
+}
+
+#popup-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../src/img/download-removebg-preview.png'); /* Set your image path */
+    background-size: contain;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+    #popup-button:focus {
+        outline: none; /* Remove focus outline for better aesthetics */
+    }
+#user-popup {
+    /* Adjusted styles for the user-popup */
+    font-size: 16px; /* Example: Adjust the font size for the user-popup */
+}
+.user-info-container {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 100px; /* Set the avatar width */
+    height: 100px; /* Set the avatar height */
+    border-radius: 50%; /* Make the avatar a circle */
+    margin-right: 10px; /* Add some spacing between the avatar and text */
+}
+
+.user-info {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.popup-content {
+    /* Additional styles for the content inside the popup */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/* Styles for small screens */
+@media screen and (max-width: 768px) {
+    .popup-container {
+        max-width: 200px; /* Set the maximum width for small screens */
+        font-size: 14px; /* Smaller font size for small screens */
+    }
+}
+
+.user-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px; /* Add some space between user info and buttons */
+}
+
+    .user-buttons button {
+        width: 80px; /* Set the fixed width as needed */
+        height: 30px; /* Set the fixed height as needed */
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        /* Add margin between buttons */
+        .user-buttons button + button {
+            margin-left: 10px; /* Adjust the margin as needed */
+        }
+
+        /* Style for "Báo CA" button */
+        .user-buttons button.report-ca {
+            background-color: #ffcccc; /* Light red background color */
+            color: #e60000; /* Dark red text color */
+        }
+
+        /* Style for "Log out" button */
+        .user-buttons button.logout {
+            background-color: #d9d9d9; /* Light gray background color */
+            color: #4d4d4d; /* Dark gray text color */
+        }
+
+        .user-buttons button:hover {
+            filter: brightness(90%); /* Slightly reduce brightness on hover for all buttons */
+        }
+
+.player-container {
+    text-align: center;
+    margin: 10px;
+}
+
+.player-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.mini-card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.mini-card {
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 36px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background-size: cover;
+}
+
+.result-line {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}   
